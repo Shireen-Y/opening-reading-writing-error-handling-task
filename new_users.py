@@ -6,6 +6,10 @@ class New_users():
 
 # Creating new text file
 
-def new_file(new_user_file):
-    create_file = open(new_user_file, 'w')
-    return create_file
+    def new_file(new_user_file):
+        create_file = open(new_user_file, 'w')
+        return create_file
+
+    def get_name(self):
+        return self.name
+

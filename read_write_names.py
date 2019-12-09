@@ -12,9 +12,9 @@ def reading_names(names):
         print(error)
 
     finally:
-        print('Execution done!')
+        print('File shown')
 
-reading_names('names.txt')
+reading_names('users.txt')
 
 # Write in the file
 
@@ -28,5 +28,5 @@ def writing_names(names, item):
         print(error)
 
     finally:
-        print('Execution done!')
+        print('Written in file')
 
