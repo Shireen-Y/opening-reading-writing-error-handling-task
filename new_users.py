@@ -1,7 +1,11 @@
 
 class New_users():
     def __init__(self, name):
-        self.__name = name
+        self.name = name
 
-    def get_name(self):
-        return self.__name
+
+# Creating new text file
+
+def new_file(new_user_file):
+    create_file = open(new_user_file, 'w')
+    return create_file
