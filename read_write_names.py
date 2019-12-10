@@ -1,32 +1,12 @@
-# Read the file
+from new_users import *
 
-def reading_names(names):
-    try:
-        with open(names, 'r') as name_reading:
-            lines = name_reading.readlines()
-            for line in lines:
-                print(line.strip('\n'))
+new_users = []
 
-    except FileNotFoundError as error:
-        print('Check your file')
-        print(error)
+opened_file = open('users.txt', 'r')
+lines = opened_file.readlines()
+for line in lines:
+    new_users.append(New_users(line))
+print(new_users)
+opened_file.close()
 
-    finally:
-        print('File shown')
-
-reading_names('users.txt')
-
-# Write in the file
-
-def writing_names(names, item):
-    try:
-        with open(names, 'a') as names_to_write:
-            names_to_write.write(item + '\n')
-
-    except FileNotFoundError as error:
-        print('Check your file')
-        print(error)
-
-    finally:
-        print('Written in file')
-
+new_users[5].output_text_file('info1.txt')

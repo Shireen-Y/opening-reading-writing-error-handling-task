@@ -3,13 +3,9 @@ class New_users():
     def __init__(self, name):
         self.name = name
 
-
-# Creating new text file
-
-    def new_file(new_user_file):
-        create_file = open(new_user_file, 'w')
-        return create_file
-
-    def get_name(self):
-        return self.name
-
+    def output_text_file(self, file_name):
+        try:
+            with open(file_name, 'w+') as file_to_create:
+                file_to_create.write(f"The name of the user is {self.name}")
+        finally:
+            print('Execution done! Program is now closing')
